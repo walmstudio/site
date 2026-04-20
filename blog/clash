@@ -1,0 +1,591 @@
+mixed-port: 7890
+socks-port: 7891
+redir-port: 7892
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  use-hosts: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+  nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+  fake-ip-filter:
+    - "*.lan"
+    - stun.*.*.*
+    - stun.*.*
+    - time.windows.com
+    - time.nist.gov
+    - time.apple.com
+    - time.asia.apple.com
+    - "*.openwrt.pool.ntp.org"
+    - pool.ntp.org
+    - ntp.ubuntu.com
+    - time1.apple.com
+    - time2.apple.com
+    - time3.apple.com
+    - time4.apple.com
+    - time5.apple.com
+    - time6.apple.com
+    - time7.apple.com
+    - time1.google.com
+    - time2.google.com
+    - time3.google.com
+    - time4.google.com
+    - api.joox.com
+    - joox.com
+    - "*.xiami.com"
+    - "*.msftconnecttest.com"
+    - "*.msftncsi.com"
+    - +.xboxlive.com
+    - "*.*.stun.playstation.net"
+    - xbox.*.*.microsoft.com
+    - "*.ipv6.microsoft.com"
+    - speedtest.cros.wr.pvp.net
+proxies:
+  - name: 🇪🇺 ⚡️ Быстрые | Авто
+    type: ss
+    server: web.max.ru
+    port: 1234
+    network: tcp
+    udp: true
+    password: ZvNnjsf_4wKts9CB2TqJ6FHWaNXnZAyo
+    cipher: chacha20-ietf-poly1305
+    udp-over-tcp: false
+    udp-over-tcp-version: 1
+    client-fingerprint: chrome
+  - name: 🇪🇺 🔥 Зарубежный | Авто
+    type: ss
+    server: web.max.ru
+    port: 1234
+    network: tcp
+    udp: true
+    password: ZvNnjsf_4wKts9CB2TqJ6FHWaNXnZAyo
+    cipher: chacha20-ietf-poly1305
+    udp-over-tcp: false
+    udp-over-tcp-version: 1
+    client-fingerprint: chrome
+  - name: 🇪🇺 📱 LTE Обход | Авто
+    type: ss
+    server: web.max.ru
+    port: 1234
+    network: tcp
+    udp: true
+    password: ZvNnjsf_4wKts9CB2TqJ6FHWaNXnZAyo
+    cipher: chacha20-ietf-poly1305
+    udp-over-tcp: false
+    udp-over-tcp-version: 1
+    client-fingerprint: chrome
+  - name: 🇩🇪 📱 LTE Обход | Мегафон
+    type: vless
+    server: 51.250.30.56
+    port: 443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: max.ru
+    reality-opts:
+      public-key: ptUTS1OnA_RM9EA6B792pQp3n2xvTh6RuxOocysEfQM
+      short-id: ""
+    client-fingerprint: chrome
+  - name: 🇷🇺 📱 LTE Обход | Все операторы
+    type: vless
+    server: 51.250.37.161
+    port: 443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: max.ru
+    reality-opts:
+      public-key: XgWqfL-cdtxdZzBkwA-fxdFCLMywD0zL_0i-pHsp2gE
+      short-id: ""
+    client-fingerprint: chrome
+  - name: "🇱🇹 📱 LTE Обход | Все операторы #1"
+    type: vless
+    server: 51.250.87.167
+    port: 443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: max.ru
+    reality-opts:
+      public-key: MHUJytyxOGD20PqHG1gp-DV5ytQ0UuacYUaJUQoZrF4
+      short-id: ""
+    client-fingerprint: chrome
+  - name: 🇸🇪 📱 LTE Обход | Все операторы
+    type: vless
+    server: 51.250.101.16
+    port: 443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: max.ru
+    reality-opts:
+      public-key: a56pxqG19frODykWIJ5FKqk1NnIpG2k6JPqv8uKq9Fc
+      short-id: ""
+    client-fingerprint: chrome
+  - name: 🇱🇹 📱 LTE Обход | Все операторы
+    type: vless
+    server: 51.250.5.63
+    port: 443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: max.ru
+    reality-opts:
+      public-key: f9AiyvsdiGpy9hGb6KP00ekHaeIhnQ3eRGJWGvGZQEw
+      short-id: ""
+    client-fingerprint: chrome
+  - name: 🇪🇺 ⬇️ ⚡️ Быстрые до 10 Гбит/с ⬇️
+    type: vless
+    server: fi.skytunnel.pw
+    port: 8443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: bunny.net
+    reality-opts:
+      public-key: QGlJtT7TdXFaIctNpsvykWqAgTR3VCq3Z0H94-QKHDc
+      short-id: ""
+    client-fingerprint: firefox
+  - name: 🇫🇮 ⚡️ Финляндия
+    type: vless
+    server: fi.skytunnel.pw
+    port: 8443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: bunny.net
+    reality-opts:
+      public-key: QGlJtT7TdXFaIctNpsvykWqAgTR3VCq3Z0H94-QKHDc
+      short-id: ""
+    client-fingerprint: firefox
+  - name: 🇩🇪 ⚡️ Германия
+    type: vless
+    server: de.skytunnel.pw
+    port: 8443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: bunny.net
+    reality-opts:
+      public-key: 92bt1gYq9EAz3SSOtKDrmqnbetNcaStEDicwrFg0_Rc
+      short-id: ""
+    client-fingerprint: firefox
+  - name: "🇩🇪 ⚡️ Германия #2"
+    type: vless
+    server: de2.skytunnel.pw
+    port: 8443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: bunny.net
+    reality-opts:
+      public-key: 92bt1gYq9EAz3SSOtKDrmqnbetNcaStEDicwrFg0_Rc
+      short-id: ""
+    client-fingerprint: firefox
+  - name: 🇦🇲 ⚡️ Армения
+    type: vless
+    server: am.skytunnel.pw
+    port: 8443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: bunny.net
+    reality-opts:
+      public-key: QGlJtT7TdXFaIctNpsvykWqAgTR3VCq3Z0H94-QKHDc
+      short-id: ""
+    client-fingerprint: firefox
+  - name: 🇹🇯 ⚡️ Таджикистан
+    type: vless
+    server: tj.skytunnel.pw
+    port: 8443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: bunny.net
+    reality-opts:
+      public-key: QGlJtT7TdXFaIctNpsvykWqAgTR3VCq3Z0H94-QKHDc
+      short-id: ""
+    client-fingerprint: firefox
+  - name: "🇵🇱 ⚡️ Польша #2"
+    type: vless
+    server: pl2.skytunnel.pw
+    port: 8443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: bunny.net
+    reality-opts:
+      public-key: QGlJtT7TdXFaIctNpsvykWqAgTR3VCq3Z0H94-QKHDc
+      short-id: ""
+    client-fingerprint: firefox
+  - name: "🇫🇮 ⚡️ Финляндия #2"
+    type: vless
+    server: fi19.skytunnel.pw
+    port: 8443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: bunny.net
+    reality-opts:
+      public-key: QGlJtT7TdXFaIctNpsvykWqAgTR3VCq3Z0H94-QKHDc
+      short-id: ""
+    client-fingerprint: firefox
+  - name: ⬇️ 🎮 Игровые ⬇️
+    type: vless
+    server: 85.155.230.76
+    port: 8443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: bunny.net
+    reality-opts:
+      public-key: 92bt1gYq9EAz3SSOtKDrmqnbetNcaStEDicwrFg0_Rc
+      short-id: ""
+    client-fingerprint: firefox
+  - name: 🇵🇱 🎮 Польша
+    type: vless
+    server: 85.155.230.76
+    port: 8443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: bunny.net
+    reality-opts:
+      public-key: 92bt1gYq9EAz3SSOtKDrmqnbetNcaStEDicwrFg0_Rc
+      short-id: ""
+    client-fingerprint: firefox
+  - name: "🇪🇪 🎮 Эстония #2"
+    type: vless
+    server: 144.31.170.239
+    port: 8443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: bunny.net
+    reality-opts:
+      public-key: AYWvVCObGJ_5TnNMGj4z_UDSDzMJ3IcoRgIBCAeUWFs
+      short-id: ""
+    client-fingerprint: firefox
+  - name: 🇪🇺 ⬇️ ⭐️ Ютуб Без Рекламы ⬇️
+    type: vless
+    server: ee.skytunnel.pw
+    port: 443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: yandex.ru
+    reality-opts:
+      public-key: CNkAFTW9giSVXiW68A9OqlSKy9HJ0pLmgEL4X4PzrHQ
+      short-id: ""
+    client-fingerprint: firefox
+  - name: 🇪🇪 ⭐️ Эстония
+    type: vless
+    server: ee.skytunnel.pw
+    port: 443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: yandex.ru
+    reality-opts:
+      public-key: CNkAFTW9giSVXiW68A9OqlSKy9HJ0pLmgEL4X4PzrHQ
+      short-id: ""
+    client-fingerprint: firefox
+  - name: 🇷🇺 ⭐️ Россия
+    type: vless
+    server: ru.skytunnel.pw
+    port: 8443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: bunny.net
+    reality-opts:
+      public-key: 92bt1gYq9EAz3SSOtKDrmqnbetNcaStEDicwrFg0_Rc
+      short-id: ""
+    client-fingerprint: firefox
+  - name: 🇳🇴 ⭐️ Норвегия
+    type: vless
+    server: no.skytunnel.pw
+    port: 443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: yandex.ru
+    reality-opts:
+      public-key: CNkAFTW9giSVXiW68A9OqlSKy9HJ0pLmgEL4X4PzrHQ
+      short-id: ""
+    client-fingerprint: firefox
+  - name: 🇪🇺 ⬇️ Остальные ⬇️
+    type: vless
+    server: au.skytunnel.pw
+    port: 8443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: bunny.net
+    reality-opts:
+      public-key: 92bt1gYq9EAz3SSOtKDrmqnbetNcaStEDicwrFg0_Rc
+      short-id: ""
+    client-fingerprint: firefox
+  - name: 🇦🇹 Австрия
+    type: vless
+    server: au.skytunnel.pw
+    port: 8443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: bunny.net
+    reality-opts:
+      public-key: 92bt1gYq9EAz3SSOtKDrmqnbetNcaStEDicwrFg0_Rc
+      short-id: ""
+    client-fingerprint: firefox
+  - name: 🇧🇬 Болгария
+    type: vless
+    server: bg.skytunnel.pw
+    port: 8443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: bunny.net
+    reality-opts:
+      public-key: 92bt1gYq9EAz3SSOtKDrmqnbetNcaStEDicwrFg0_Rc
+      short-id: ""
+    client-fingerprint: firefox
+  - name: 🇰🇿 Казахстан
+    type: vless
+    server: kz.skytunnel.pw
+    port: 8443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: bunny.net
+    reality-opts:
+      public-key: 92bt1gYq9EAz3SSOtKDrmqnbetNcaStEDicwrFg0_Rc
+      short-id: ""
+    client-fingerprint: firefox
+  - name: "🇱🇻 Латвия #2"
+    type: vless
+    server: lv2.skytunnel.pw
+    port: 8443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: bunny.net
+    reality-opts:
+      public-key: 92bt1gYq9EAz3SSOtKDrmqnbetNcaStEDicwrFg0_Rc
+      short-id: ""
+    client-fingerprint: firefox
+  - name: "🇱🇻 Латвия #3"
+    type: vless
+    server: lv3.skytunnel.pw
+    port: 8443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: bunny.net
+    reality-opts:
+      public-key: QGlJtT7TdXFaIctNpsvykWqAgTR3VCq3Z0H94-QKHDc
+      short-id: ""
+    client-fingerprint: firefox
+  - name: 🇺🇸 США | Sora
+    type: vless
+    server: usa1.skytunnel.pw
+    port: 8443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: bunny.net
+    reality-opts:
+      public-key: 92bt1gYq9EAz3SSOtKDrmqnbetNcaStEDicwrFg0_Rc
+      short-id: ""
+    client-fingerprint: firefox
+  - name: 🇹🇷 Турция
+    type: vless
+    server: tr.skytunnel.pw
+    port: 8443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: bunny.net
+    reality-opts:
+      public-key: AYWvVCObGJ_5TnNMGj4z_UDSDzMJ3IcoRgIBCAeUWFs
+      short-id: ""
+    client-fingerprint: firefox
+  - name: 🇰🇷 Южная Корея
+    type: vless
+    server: kr.skytunnel.pw
+    port: 8443
+    network: tcp
+    udp: true
+    uuid: 33f8cf11-854d-4497-8f81-5a78a44655a6
+    packet-encoding: xudp
+    flow: xtls-rprx-vision
+    tls: true
+    servername: bunny.net
+    reality-opts:
+      public-key: 92bt1gYq9EAz3SSOtKDrmqnbetNcaStEDicwrFg0_Rc
+      short-id: ""
+    client-fingerprint: firefox
+  - name: 🇪🇺 ⬇️ Разное ⬇️
+    type: ss
+    server: lv.skytunnel.pw
+    port: 2030
+    network: tcp
+    udp: true
+    password: ZvNnjsf_4wKts9CB2TqJ6FHWaNXnZAyo
+    cipher: chacha20-ietf-poly1305
+    client-fingerprint: chrome
+  - name: 🇱🇻 Латвия | SS
+    type: ss
+    server: lv.skytunnel.pw
+    port: 2030
+    network: tcp
+    udp: true
+    password: ZvNnjsf_4wKts9CB2TqJ6FHWaNXnZAyo
+    cipher: chacha20-ietf-poly1305
+    client-fingerprint: chrome
+
+proxy-groups:
+  - name: → Remnawave
+    type: select
+    proxies:
+      - 🇪🇺 ⚡️ Быстрые | Авто
+      - 🇪🇺 🔥 Зарубежный | Авто
+      - 🇪🇺 📱 LTE Обход | Авто
+      - 🇩🇪 📱 LTE Обход | Мегафон
+      - 🇷🇺 📱 LTE Обход | Все операторы
+      - "🇱🇹 📱 LTE Обход | Все операторы #1"
+      - 🇸🇪 📱 LTE Обход | Все операторы
+      - 🇱🇹 📱 LTE Обход | Все операторы
+      - 🇪🇺 ⬇️ ⚡️ Быстрые до 10 Гбит/с ⬇️
+      - 🇫🇮 ⚡️ Финляндия
+      - 🇩🇪 ⚡️ Германия
+      - "🇩🇪 ⚡️ Германия #2"
+      - 🇦🇲 ⚡️ Армения
+      - 🇹🇯 ⚡️ Таджикистан
+      - "🇵🇱 ⚡️ Польша #2"
+      - "🇫🇮 ⚡️ Финляндия #2"
+      - ⬇️ 🎮 Игровые ⬇️
+      - 🇵🇱 🎮 Польша
+      - "🇪🇪 🎮 Эстония #2"
+      - 🇪🇺 ⬇️ ⭐️ Ютуб Без Рекламы ⬇️
+      - 🇪🇪 ⭐️ Эстония
+      - 🇷🇺 ⭐️ Россия
+      - 🇳🇴 ⭐️ Норвегия
+      - 🇪🇺 ⬇️ Остальные ⬇️
+      - 🇦🇹 Австрия
+      - 🇧🇬 Болгария
+      - 🇰🇿 Казахстан
+      - "🇱🇻 Латвия #2"
+      - "🇱🇻 Латвия #3"
+      - 🇺🇸 США | Sora
+      - 🇹🇷 Турция
+      - 🇰🇷 Южная Корея
+      - 🇪🇺 ⬇️ Разное ⬇️
+      - 🇱🇻 Латвия | SS
+
+rules:
+  - DOMAIN-KEYWORD,appsflyer,REJECT
+  - DOMAIN-KEYWORD,youtube,→ Remnawave
+  - DOMAIN-KEYWORD,googlevideo,→ Remnawave
+  - DOMAIN-KEYWORD,ytimg,→ Remnawave
+  - DOMAIN-KEYWORD,instagram,→ Remnawave
+  - DOMAIN-KEYWORD,discord,→ Remnawave
+  - DOMAIN-SUFFIX,ru,DIRECT
+  - DOMAIN-SUFFIX,su,DIRECT
+  - DOMAIN-SUFFIX,xn--p1ai,DIRECT
+  - GEOIP,RU,DIRECT
+  - GEOIP,LAN,DIRECT,no-resolve
+  - GEOSITE,category-ru,DIRECT
+  - MATCH,→ Remnawave
